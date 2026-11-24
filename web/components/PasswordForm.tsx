@@ -1,0 +1,10 @@
+'use client';
+import {useState} from 'react';
+import {Activity,Lock,ArrowRight} from 'lucide-react';
+export default function PasswordForm({setup=false}:{setup?:boolean}){
+ const [busy,setBusy]=useState(false),[error,setError]=useState('');
+ return <main className="password-shell"><section className="password-card"><span className="password-brand"><Activity size={25}/>多模态微形变监测</span><span className="password-lock"><Lock size={26}/></span><h1>{setup?'设置管理员密码':'管理员登录'}</h1><p>{setup?'请亲自设置一个12～128位的独立密码。设置后即可用此密码在手机或电脑访问。':'输入管理员密码，修改评分规则并控制手动试鸣。游客可直接返回监测页查看数据。'}</p><form onSubmit={async event=>{
+  event.preventDefault();setError('');setBusy(true);const form=event.currentTarget;const data=new FormData(form);
+  try{const response=await fetch(setup?'/api/auth/setup':'/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:data.get('password'),...(setup?{confirm:data.get('confirm')}:{})})});const body=await response.json() as {error?:string};if(!response.ok)throw Error(body.error||'暂时无法登录');form.reset();window.location.assign('/#admin');}catch(e){setError(e instanceof Error?e.message:'请检查网络后重试');}finally{setBusy(false);}
+ }}><label htmlFor="password">{setup?'新密码':'管理员密码'}</label><input id="password" name="password" type="password" autoComplete={setup?'new-password':'current-password'} minLength={12} maxLength={128} required autoFocus placeholder={setup?'至少12位，可使用中文短语':'请输入密码'}/>{setup&&<><label htmlFor="confirm">再次输入密码</label><input id="confirm" name="confirm" type="password" autoComplete="new-password" minLength={12} maxLength={128} required placeholder="再次输入相同密码"/></>}{error&&<div role="alert" className="password-error">{error}</div>}<button className="button primary full" disabled={busy} type="submit">{busy?'正在验证…':setup?'保存密码并进入':'进入管理中心'}<ArrowRight size={16}/></button></form><a className="guest-entry" href="/">以游客身份查看监测数据 →</a><small>{setup?'请保存好密码，不要使用其他账号的常用密码。':'密码由服务器验证 · 登录有效期7天'}</small></section></main>
+}

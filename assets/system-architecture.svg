@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#287564"/></marker></defs>
+<rect width="1000" height="500" rx="20" fill="#f4f7f3"/>
+<g font-family="Arial, Microsoft YaHei, sans-serif" fill="#183f34">
+<text x="40" y="45" font-size="25" font-weight="bold">多模态微形变监测 · 端云协同架构</text>
+<text x="40" y="73" font-size="15" fill="#60776c">采集 → 处理与实验评判 → 本地报警 / 云端监测与控制</text>
+<g fill="#fff" stroke="#bdd4c6" stroke-width="2"><rect x="40" y="110" width="190" height="150" rx="14"/><rect x="310" y="110" width="230" height="150" rx="14"/><rect x="620" y="110" width="150" height="150" rx="14"/><rect x="830" y="110" width="140" height="150" rx="14"/><rect x="40" y="340" width="190" height="120" rx="14"/><rect x="310" y="340" width="230" height="120" rx="14"/><rect x="730" y="340" width="240" height="120" rx="14"/></g>
+<text x="60" y="142" font-size="19" font-weight="bold">传感器输入</text><text x="60" y="173" font-size="16">位移 / 土壤 / 雨滴 AO</text><text x="60" y="203" font-size="16">MPU6050 六轴数据</text><text x="60" y="233" font-size="16">ADC + 软件 I²C</text>
+<text x="330" y="142" font-size="20" font-weight="bold">STM32F407</text><text x="330" y="173" font-size="16">滤波 / 5秒同步窗口</text><text x="330" y="203" font-size="16">基准 / 加权评分 / 有效性</text><text x="330" y="233" font-size="16">按键 / 中断 / 命令回执</text>
+<text x="640" y="145" font-size="19" font-weight="bold">4G DTU</text><text x="640" y="182" font-size="16">USART2</text><text x="640" y="213" font-size="16">MQTT / TLS</text><text x="640" y="242" font-size="16">OneJSON</text>
+<text x="848" y="145" font-size="19" font-weight="bold">OneNET</text><text x="848" y="182" font-size="16">属性上报</text><text x="848" y="213" font-size="16">历史记录</text><text x="848" y="242" font-size="16">属性下发</text>
+<text x="60" y="372" font-size="18" font-weight="bold">C# 电脑工具</text><text x="60" y="404" font-size="16">中文串口 / 天气API</text><text x="60" y="434" font-size="16">校验帧 / 过期处理</text>
+<text x="330" y="372" font-size="18" font-weight="bold">本地交互与报警</text><text x="330" y="404" font-size="16">ST7789 中文三页 LCD</text><text x="330" y="434" font-size="16">蜂鸣器 / K0 / K1 / K-UP</text>
+<text x="750" y="372" font-size="18" font-weight="bold">Web + 服务端</text><text x="750" y="404" font-size="16">实时 / 历史 / 降水曲线</text><text x="750" y="434" font-size="16">游客查看 / 管理员配置</text>
+<g stroke="#287564" stroke-width="2.5" fill="none" marker-end="url(#arrow)"><path d="M230 183 H310"/><path d="M540 183 H620"/><path d="M770 183 H830"/><path d="M425 260 V340"/><path d="M230 389 H270 V290 H350 V260"/><path d="M900 260 V340"/></g>
+<text x="245" y="170" font-size="13">采集</text><text x="550" y="170" font-size="13">串口</text><text x="436" y="305" font-size="13">SPI / GPIO</text><text x="908" y="306" font-size="13">API</text>
+</g></svg>

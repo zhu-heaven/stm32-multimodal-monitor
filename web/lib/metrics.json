@@ -1,0 +1,240 @@
+[
+  {
+    "id": "accel_x",
+    "name": "X轴加速度",
+    "type": "int32",
+    "unit": "",
+    "description": "单位mg；1000mg等于1g"
+  },
+  {
+    "id": "accel_y",
+    "name": "Y轴加速度",
+    "type": "int32",
+    "unit": "",
+    "description": "单位mg；1000mg等于1g"
+  },
+  {
+    "id": "accel_z",
+    "name": "Z轴加速度",
+    "type": "int32",
+    "unit": "",
+    "description": "单位mg；1000mg等于1g"
+  },
+  {
+    "id": "chip_temp",
+    "name": "芯片温度",
+    "type": "float",
+    "unit": "℃",
+    "description": "IMU芯片温度，非环境温度"
+  },
+  {
+    "id": "displacement_mm",
+    "name": "位移",
+    "type": "float",
+    "unit": "mm",
+    "description": "拔出时位移增加；零点满量程待校准"
+  },
+  {
+    "id": "gyro_x",
+    "name": "X轴角速度",
+    "type": "float",
+    "unit": "",
+    "description": "单位度每秒"
+  },
+  {
+    "id": "gyro_y",
+    "name": "Y轴角速度",
+    "type": "float",
+    "unit": "",
+    "description": "单位度每秒"
+  },
+  {
+    "id": "gyro_z",
+    "name": "Z轴角速度",
+    "type": "float",
+    "unit": "",
+    "description": "单位度每秒"
+  },
+  {
+    "id": "rain_wetness",
+    "name": "雨滴湿润度",
+    "type": "float",
+    "unit": "%",
+    "description": "相对湿润度，非降雨量；湿端待校准"
+  },
+  {
+    "id": "soil_moisture",
+    "name": "土壤相对湿度",
+    "type": "float",
+    "unit": "%",
+    "description": "相对湿度，非标定体积含水率；湿端待校准"
+  },
+  {
+    "id": "weather_temp",
+    "name": "气温",
+    "type": "float",
+    "unit": "℃",
+    "description": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。"
+  },
+  {
+    "id": "weather_humidity",
+    "name": "空气湿度",
+    "type": "int32",
+    "unit": "%",
+    "description": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。"
+  },
+  {
+    "id": "weather_wind",
+    "name": "风速",
+    "type": "float",
+    "unit": "m/s",
+    "description": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。"
+  },
+  {
+    "id": "weather_code",
+    "name": "天气代码",
+    "type": "int32",
+    "unit": "",
+    "description": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。"
+  },
+  {
+    "id": "weather_city",
+    "name": "城市",
+    "type": "string",
+    "unit": null,
+    "description": "Open-Meteo城市天气，城市Changsha为长沙，英文天气描述。"
+  },
+  {
+    "id": "weather_text",
+    "name": "天气",
+    "type": "string",
+    "unit": null,
+    "description": "Open-Meteo城市天气，城市Changsha为长沙，英文天气描述。"
+  },
+  {
+    "id": "weather_time_text",
+    "name": "北京时间",
+    "type": "string",
+    "unit": null,
+    "description": "天气API数据时间，格式yyyy-MM-dd HH:mm:ss，UTC+8。原weather_time保留Unix秒。"
+  },
+  {
+    "id": "tilt_angle",
+    "name": "合成倾角",
+    "type": "float",
+    "unit": "°",
+    "description": "与LCD一致的三轴重力向量合成倾角；显示分辨率不是测量精度。"
+  },
+  {
+    "id": "roll_angle",
+    "name": "横滚角",
+    "type": "float",
+    "unit": "°",
+    "description": "与LCD一致，绕传感器X轴的横滚角。"
+  },
+  {
+    "id": "pitch_angle",
+    "name": "俯仰角",
+    "type": "float",
+    "unit": "°",
+    "description": "与LCD一致，绕传感器Y轴的俯仰角。"
+  },
+  {
+    "id": "tilt_rate",
+    "name": "倾角变化率",
+    "type": "float",
+    "unit": "°/min",
+    "description": "与LCD一致的5秒窗口平均变化率，单位度每分钟；不是日倾角变化。"
+  },
+  {
+    "id": "tilt_status",
+    "name": "姿态状态",
+    "type": "string",
+    "unit": null,
+    "description": "数据有效、运动干扰或传感器未连接；无效时角度不更新，不能使用旧角度作当前有效数据。"
+  },
+  {
+    "id": "tilt_rate_status",
+    "name": "倾角变化率状态",
+    "type": "string",
+    "unit": null,
+    "description": "数据有效或等待有效数据；速率初始化至少需要5秒。"
+  },
+  {
+    "id": "buzzer_switch",
+    "name": "蜂鸣器开关",
+    "type": "bool",
+    "unit": null,
+    "description": "云端设置true开启、false关闭；K1本地控制后同步上报实际状态。"
+  },
+  {
+    "id": "displacement_avg",
+    "name": "平均位移量",
+    "type": "float",
+    "unit": "mm",
+    "description": "与倾角共用5秒有效窗口，配对位移样本的算术平均；不是位移变化率。"
+  },
+  {
+    "id": "forecast_rain_3d",
+    "name": "三日累计降水量（昨今明）",
+    "type": "float",
+    "unit": "mm",
+    "description": "长沙昨天、今天、明天三个北京时间自然日降水之和；混合历史和预报，非现场实测。"
+  },
+  {
+    "id": "forecast_rain_avg",
+    "name": "三日日均降水量（昨今明）",
+    "type": "float",
+    "unit": "mm/d",
+    "description": "昨天、今天、明天三日降水之和除以3。"
+  },
+  {
+    "id": "displacement_change",
+    "name": "位移相对变化",
+    "type": "float",
+    "unit": "mm",
+    "description": "与LCD第三页一致，5秒平均位移相对K-UP基准的绝对变化量，未设基准或窗口无效时不更新。"
+  },
+  {
+    "id": "tilt_change",
+    "name": "倾角相对变化",
+    "type": "float",
+    "unit": "°",
+    "description": "与LCD第三页一致，合成倾角相对K-UP基准的绝对变化量，非日倾角变化。"
+  },
+  {
+    "id": "risk_score",
+    "name": "综合得分",
+    "type": "float",
+    "unit": "",
+    "description": "与LCD第三页相同的实验加权得分0至3，缺测时不生成新得分，须结合评分数据状态和时间使用。"
+  },
+  {
+    "id": "risk_level",
+    "name": "评判等级",
+    "type": "string",
+    "unit": null,
+    "description": "实验分档：安全、预警、危险、待设基准、数据不足、确认中；与LCD同源，非现场安全认证。"
+  },
+  {
+    "id": "risk_data_status",
+    "name": "评分数据状态",
+    "type": "string",
+    "unit": null,
+    "description": "与LCD第三页数据状态同源：完整、按K-UP设基准、等待有效数据。失效时原数值可能保留在平台历史中，应以此状态和时间判断有效性。"
+  },
+  {
+    "id": "buzzer_mode",
+    "name": "蜂鸣器模式",
+    "type": "string",
+    "unit": null,
+    "description": "只读实际有效模式：静音、间歇响、持续响。保留蜂鸣器开关buzzer_switch用于手动控制，自动报警优先。"
+  },
+  {
+    "id": "risk_config",
+    "name": "评分规则参数",
+    "type": "string",
+    "unit": "",
+    "description": "设备实际使用的版本化评分规则"
+  }
+]

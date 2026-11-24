@@ -1,0 +1,589 @@
+{
+  "properties": [
+    {
+      "identifier": "accel_x",
+      "name": "X轴加速度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "单位mg；1000mg等于1g",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "max": "16000",
+          "min": "-16000",
+          "step": "1",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "accel_y",
+      "name": "Y轴加速度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "单位mg；1000mg等于1g",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "max": "16000",
+          "min": "-16000",
+          "step": "1",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "accel_z",
+      "name": "Z轴加速度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "单位mg；1000mg等于1g",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "max": "16000",
+          "min": "-16000",
+          "step": "1",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "chip_temp",
+      "name": "芯片温度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "IMU芯片温度，非环境温度",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "max": "125",
+          "min": "-40",
+          "step": "0.1",
+          "unit": "℃"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "displacement_mm",
+      "name": "位移",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "拔出时位移增加；零点满量程待校准",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "max": "75",
+          "min": "0",
+          "step": "0.01",
+          "unit": "mm"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "gyro_x",
+      "name": "X轴角速度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "单位度每秒",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "max": "2000",
+          "min": "-2000",
+          "step": "0.1",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "gyro_y",
+      "name": "Y轴角速度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "单位度每秒",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "max": "2000",
+          "min": "-2000",
+          "step": "0.1",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "gyro_z",
+      "name": "Z轴角速度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "单位度每秒",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "max": "2000",
+          "min": "-2000",
+          "step": "0.1",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "rain_wetness",
+      "name": "雨滴湿润度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "相对湿润度，非降雨量；湿端待校准",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "max": "100",
+          "min": "0",
+          "step": "0.1",
+          "unit": "%"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "soil_moisture",
+      "name": "土壤相对湿度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "相对湿度，非标定体积含水率；湿端待校准",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "max": "100",
+          "min": "0",
+          "step": "0.1",
+          "unit": "%"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "weather_temp",
+      "name": "气温",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "-80",
+          "max": "65",
+          "step": "0.1",
+          "unit": "℃"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "weather_humidity",
+      "name": "空气湿度",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "step": "1",
+          "unit": "%"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "weather_wind",
+      "name": "风速",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "150",
+          "step": "0.1",
+          "unit": "m/s"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "weather_code",
+      "name": "天气代码",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "Open-Meteo城市天气API数据；非本地传感器测量。天气时间为北京时间文本。",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "99",
+          "step": "1",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "weather_city",
+      "name": "城市",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "Open-Meteo城市天气，城市Changsha为长沙，英文天气描述。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "32"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "weather_text",
+      "name": "天气",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "Open-Meteo城市天气，城市Changsha为长沙，英文天气描述。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "32"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "weather_time_text",
+      "name": "北京时间",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "天气API数据时间，格式yyyy-MM-dd HH:mm:ss，UTC+8。原weather_time保留Unix秒。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "32"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "tilt_angle",
+      "name": "合成倾角",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD一致的三轴重力向量合成倾角；显示分辨率不是测量精度。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "180",
+          "step": "0.01",
+          "unit": "°"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "roll_angle",
+      "name": "横滚角",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD一致，绕传感器X轴的横滚角。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "-180",
+          "max": "180",
+          "step": "0.01",
+          "unit": "°"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "pitch_angle",
+      "name": "俯仰角",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD一致，绕传感器Y轴的俯仰角。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "-90",
+          "max": "90",
+          "step": "0.01",
+          "unit": "°"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "tilt_rate",
+      "name": "倾角变化率",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD一致的5秒窗口平均变化率，单位度每分钟；不是日倾角变化。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "-3000",
+          "max": "3000",
+          "step": "0.01",
+          "unit": "°/min"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "tilt_status",
+      "name": "姿态状态",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "数据有效、运动干扰或传感器未连接；无效时角度不更新，不能使用旧角度作当前有效数据。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "64"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "tilt_rate_status",
+      "name": "倾角变化率状态",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "数据有效或等待有效数据；速率初始化至少需要5秒。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "64"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "buzzer_switch",
+      "name": "蜂鸣器开关",
+      "functionType": "u",
+      "accessMode": "rw",
+      "desc": "云端设置true开启、false关闭；K1本地控制后同步上报实际状态。",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "false": "关闭",
+          "true": "开启"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "displacement_avg",
+      "name": "平均位移量",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与倾角共用5秒有效窗口，配对位移样本的算术平均；不是位移变化率。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "75",
+          "step": "0.01",
+          "unit": "mm"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "forecast_rain_3d",
+      "name": "三日累计降水量（昨今明）",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "Open-Meteo长沙天气预报，昨天、今天、明天三个北京时间自然日的累计降水量；非现场实测。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "6000",
+          "step": "0.1",
+          "unit": "mm"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "forecast_rain_avg",
+      "name": "三日日均降水量（昨今明）",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与三日累计预报相同日期范围，累计值除以3，显示精度0.1毫米每日。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "2000",
+          "step": "0.1",
+          "unit": "mm/d"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "displacement_change",
+      "name": "位移相对变化",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD第三页一致，5秒平均位移相对K-UP基准的绝对变化量，未设基准或窗口无效时不更新。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "75",
+          "step": "0.01",
+          "unit": "mm"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "tilt_change",
+      "name": "倾角相对变化",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD第三页一致，合成倾角相对K-UP基准的绝对变化量，非日倾角变化。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "180",
+          "step": "0.01",
+          "unit": "°"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "risk_score",
+      "name": "综合得分",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD第三页相同的实验加权得分0至3，缺测时不生成新得分，须结合评分数据状态和时间使用。",
+      "dataType": {
+        "type": "float",
+        "specs": {
+          "min": "0",
+          "max": "3",
+          "step": "0.01",
+          "unit": ""
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "risk_level",
+      "name": "评判等级",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "实验分档：安全、预警、危险、待设基准、数据不足、确认中；与LCD同源，非现场安全认证。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "64"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "risk_data_status",
+      "name": "评分数据状态",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "与LCD第三页数据状态同源：完整、按K-UP设基准、等待有效数据。失效时原数值可能保留在平台历史中，应以此状态和时间判断有效性。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "64"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "buzzer_mode",
+      "name": "蜂鸣器模式",
+      "functionType": "u",
+      "accessMode": "r",
+      "desc": "只读实际有效模式：静音、间歇响、持续响。保留蜂鸣器开关buzzer_switch用于手动控制，自动报警优先。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "64"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    },
+    {
+      "identifier": "risk_config",
+      "name": "评分规则参数",
+      "functionType": "u",
+      "accessMode": "rw",
+      "desc": "版本化评分规则；网页管理员设置后由设备校验、保存并回传。",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "256"
+        }
+      },
+      "functionMode": "property",
+      "required": false
+    }
+  ],
+  "events": [],
+  "services": []
+}
